@@ -23,7 +23,7 @@ char	*ft_point_base(unsigned long long point, int base)
 	digits = 0;
 	p_sv = point;
 	if (point == 0)
-		ft_strdup("0");
+		rtn = ft_strdup("0");
 	while (point != 0)
 	{
 		point = point / base;
