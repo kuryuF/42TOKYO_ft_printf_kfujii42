@@ -7,7 +7,8 @@ int	ft_printf(const char *input, ...)
 	int			print_len;
 
 	print_len = 0;
-	if (!(save = ft_strdup((char *)input)))
+	save = ft_strdup((char *)input);
+	if (!save)
 		return (0);
 	va_start(args, input);
 	print_len = ft_count_output(save, args);

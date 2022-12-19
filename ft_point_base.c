@@ -29,8 +29,9 @@ char	*ft_point_base(unsigned long long point, int base)
 		point = point / base;
 		digits++;
 	}
-	if (!(rtn = ft_calloc(digits + 1, sizeof(char))))
-		return (NULL);
+	rtn = ft_calloc(digits + 1, sizeof(char));
+	if (!rtn)
+		return (0);
 	rtn = change_base(p_sv, base, rtn, digits);
 	return (rtn);
 }
