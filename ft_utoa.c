@@ -18,6 +18,7 @@ int	ft_get_digit_u(unsigned long long n)
 char	*ft_utoa(unsigned long long n)
 {
 	char			*str;
+	char 			*str_sv;
 	int				digit;
 	unsigned int	num;
 
@@ -40,5 +41,7 @@ char	*ft_utoa(unsigned long long n)
 		digit--;
 		num = num / 10;
 	}
-	return (str);
+	str_sv = str;
+	free(str);
+	return (str_sv);
 }

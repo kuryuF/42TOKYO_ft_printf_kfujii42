@@ -20,7 +20,7 @@ int	ft_treat_something(int c, va_list args)
 	else if (c == 'X')
 		n = ft_print_hexa(va_arg(args, unsigned int), 2);
 	else if (c == '%')
-		ft_putstr_count((char *)"%");
+		n = ft_putstr_count("%");
 
 	return (n);
 }
