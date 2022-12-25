@@ -5,7 +5,7 @@ LIBFT = ./libft/libft.a
 
 SRCS =	ft_count_output.c \
 		ft_printf.c \
-		ft_treat_something.c \
+		ft_check_type_field.c \
 		ft_print_char.c \
 		ft_print_str.c \
 		ft_print_int.c \
@@ -19,7 +19,7 @@ SRCS =	ft_count_output.c \
 
 SURPL_O =	ft_count_output.o \
 			ft_printf.o \
-			ft_treat_something.o \
+			ft_check_type_field.o \
 			ft_print_char.o \
 			ft_print_str.o \
 			ft_print_int.o \

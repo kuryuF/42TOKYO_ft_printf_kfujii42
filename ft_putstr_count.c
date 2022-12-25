@@ -1,12 +1,12 @@
 #include "ft_printf.h"
 
-int ft_putstr_count(char *c)
+int ft_putstr_count(char *str)
 {
-    int n;
+	int	len;
 
-    if (!c)
-        return (0);
-    n = ft_strlen(c);
-    ft_putstr_fd(c, 1);
-    return (n);
+	if (!str)
+		return (0);
+	len = ft_strlen(str);
+	ft_putstr_fd(str, 1);
+	return (len);
 }

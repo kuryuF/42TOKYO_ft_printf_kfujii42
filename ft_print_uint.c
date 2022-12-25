@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int	ft_print_uint(unsigned long long uint)
+int	ft_print_uint(unsigned int uint)
 {
 	char *str;
 	int	len;

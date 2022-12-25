@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-char	*change_base(unsigned long long p_sv, int b, char *r, int d)
+static char	*change_base(unsigned long long p_sv, int b, char *r, int d)
 {
 	while (p_sv != 0)
 	{
@@ -16,9 +16,9 @@ char	*change_base(unsigned long long p_sv, int b, char *r, int d)
 
 char	*ft_point_base(unsigned long long point, int base)
 {
-	char *rtn;
-	unsigned long long p_sv;
-	int digits;
+	char				*rtn;
+	unsigned long long 	p_sv;
+	int					digits;
 
 	digits = 0;
 	p_sv = point;

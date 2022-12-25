@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int	ft_print_hexa(unsigned int i, int f)
+int	ft_print_hexa(unsigned int i, int flag)
 {
 	char	*hex;
 	int		len;
@@ -8,7 +8,7 @@ int	ft_print_hexa(unsigned int i, int f)
 	if (!i)
 		i = 0;
 	hex = ft_point_base((unsigned long long)i, 16);
-	if (f == 1)
+	if (flag == 1)
 		hex = ft_tolower_all(hex);
 	len = ft_putstr_count(hex);
 	free(hex);

@@ -1,14 +1,14 @@
 #include "ft_printf.h"
 
-char	*ft_tolower_all(char *c)
+char	*ft_tolower_all(char *str)
 {
 	int i;
 
 	i = 0;
-	while (c[i])
+	while (str[i])
 	{
-		c[i] = ft_tolower(c[i]);
+		str[i] = ft_tolower(str[i]);
 		i++;
 	}
-	return (c);
+	return (str);
 }

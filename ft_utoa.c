@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int	ft_get_digit_u(unsigned long long n)
+int	ft_get_digit_u(unsigned int n)
 {
 	int	digit;
 
@@ -15,7 +15,7 @@ int	ft_get_digit_u(unsigned long long n)
 	return (digit);
 }
 
-char	*ft_utoa(unsigned long long n)
+char	*ft_utoa(unsigned int n)
 {
 	char			*str;
 	char 			*str_sv;

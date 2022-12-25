@@ -4,15 +4,15 @@ int	ft_printf(const char *input, ...)
 {
 	const char	*save;
 	va_list		args;
-	int			print_len;
+	int			output_len;
 
-	print_len = 0;
+	output_len = 0;
 	save = ft_strdup((char *)input);
 	if (!save)
 		return (0);
 	va_start(args, input);
-	print_len = ft_count_output(save, args);
+	output_len = ft_count_output(save, args);
 	va_end(args);
 	free((char *)save);
-	return (print_len);
+	return (output_len);
 }
