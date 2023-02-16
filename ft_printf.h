@@ -1,8 +1,20 @@
-#ifndef FT_PRINTF
-#define FT_PRINTF
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kfujii <kfujii@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/16 11:17:12 by kfujii            #+#    #+#             */
+/*   Updated: 2023/02/16 11:23:15 by kfujii           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "libft/libft.h"
-#include <stdarg.h>
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+
+# include "libft/libft.h"
+# include <stdarg.h>
 
 int		ft_printf(const char *input, ...);
 int		ft_count_output(const char *save, va_list args);

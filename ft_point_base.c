@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_point_base.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kfujii <kfujii@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/16 11:13:26 by kfujii            #+#    #+#             */
+/*   Updated: 2023/02/16 11:13:36 by kfujii           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static char	*change_base(unsigned long long p_sv, int b, char *r, int d)
@@ -17,7 +29,7 @@ static char	*change_base(unsigned long long p_sv, int b, char *r, int d)
 char	*ft_point_base(unsigned long long point, int base)
 {
 	char				*rtn;
-	unsigned long long 	p_sv;
+	unsigned long long	p_sv;
 	int					digits;
 
 	digits = 0;

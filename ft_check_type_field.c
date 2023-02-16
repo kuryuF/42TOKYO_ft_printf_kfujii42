@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_check_type_field.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kfujii <kfujii@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/16 11:12:32 by kfujii            #+#    #+#             */
+/*   Updated: 2023/02/16 11:12:39 by kfujii           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int	ft_check_type_field(int c, va_list args)
@@ -21,6 +33,5 @@ int	ft_check_type_field(int c, va_list args)
 		arg_len = ft_print_hexa(va_arg(args, unsigned int), 2);
 	else if (c == '%')
 		arg_len = ft_putstr_count("%");
-
 	return (arg_len);
 }
