@@ -4,3 +4,5 @@
 /libft/*.a
 /.DS_Store
 /printfTester/
+/.vscode
+/README.md
