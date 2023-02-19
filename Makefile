@@ -1,7 +1,8 @@
 NAME = libftprintf.a
-CC = gcc
-FLAGS = -c
-LIBFT = ./libft/libft.a
+CC = cc
+CFLAGS = -c -Wall -Wextra -Werror
+LIBFTDIR = ./libft
+LIBFT = $(LIBFTDIR)/libft.a
 
 SRCS =	ft_count_output.c \
 		ft_printf.c \
@@ -17,7 +18,7 @@ SRCS =	ft_count_output.c \
 		ft_point_base.c \
 		ft_tolower_all.c
 
-SURPL_O =	ft_count_output.o \
+OBJS =	ft_count_output.o \
 			ft_printf.o \
 			ft_check_type_field.o \
 			ft_print_char.o \
@@ -31,23 +32,20 @@ SURPL_O =	ft_count_output.o \
 			ft_point_base.o \
 			ft_tolower_all.o
 
-OBJS = $(SRCS:.c=.o)
-
 $(NAME): $(OBJS)
 	$(MAKE) -C ./libft
-	cp libft/libft.a $(NAME)
-	$(CC) $(FLAGS) $(SRCS)
+	cp $(LIBFT) $(NAME)
+	$(CC) $(CFLAGS) $(SRCS)
 	ar -rcs $(NAME) $(OBJS)
 
 all : $(NAME)
 
 clean :
-	$(MAKE) clean -C ./libft
-	rm -rf $(SURPL_O)
+	$(MAKE) clean -C $(LIBFTDIR)
 	rm -rf $(OBJS)
 
 fclean : clean
-	$(MAKE) fclean -C ./libft
+	$(MAKE) fclean -C $(LIBFTDIR)
 	rm -rf $(NAME)
 
 re : fclean all
