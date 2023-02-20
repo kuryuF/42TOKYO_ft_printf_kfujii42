@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower_all.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kfujii <kfujii@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sabamikan <sabamikan@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:18:32 by kfujii            #+#    #+#             */
-/*   Updated: 2023/02/16 11:18:38 by kfujii           ###   ########.fr       */
+/*   Updated: 2023/02/20 14:51:21 by sabamikan        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ char	*ft_tolower_all(char *str)
 {
 	int	i;
 
+	if (str == NULL)
+		return ("-1");
 	i = 0;
 	while (str[i])
 	{

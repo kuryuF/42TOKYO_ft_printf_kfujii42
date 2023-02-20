@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_str.c                                     :+:      :+:    :+:   */
+/*   ft_putstr_fd_rtnint.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sabamikan <sabamikan@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/16 11:16:13 by kfujii            #+#    #+#             */
-/*   Updated: 2023/02/20 12:54:14 by sabamikan        ###   ########.fr       */
+/*   Created: 2023/02/20 12:42:14 by sabamikan         #+#    #+#             */
+/*   Updated: 2023/02/20 14:21:58 by sabamikan        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-size_t	ft_print_str(char *str)
+int	ft_putstr_fd_rtnint(char *str, int fd)
 {
-	size_t	len;
+	size_t	i;
 
-	len = 0;
-	if (str == NULL)
-		str = "(null)";
-	len = ft_strlen(str);
-	if (ft_putstr_fd_rtnint(str, 1) < 0)
-		return (-1);
-	return (len);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (ft_putchar_fd_rtnint(str[i], fd) == -1)
+			return (-1);
+		i++;
+	}
+	return (1);
 }

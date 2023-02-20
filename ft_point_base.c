@@ -6,7 +6,7 @@
 /*   By: sabamikan <sabamikan@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:13:26 by kfujii            #+#    #+#             */
-/*   Updated: 2023/02/19 16:14:14 by sabamikan        ###   ########.fr       */
+/*   Updated: 2023/02/20 14:44:51 by sabamikan        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static char	*change_base(unsigned long long p_sv, int b, char *r, int d)
 		if ((p_sv % b) < 10)
 			r[d - 1] = (p_sv % b) + '0';
 		else
-			r[d - 1] = (p_sv % b) + 55;
+			r[d - 1] = (p_sv % b) + ('A' - 10);
 		p_sv /= b;
 		d--;
 	}
