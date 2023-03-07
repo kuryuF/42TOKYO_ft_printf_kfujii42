@@ -6,13 +6,13 @@
 /*   By: sabamikan <sabamikan@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:15:25 by kfujii            #+#    #+#             */
-/*   Updated: 2023/02/20 15:13:08 by sabamikan        ###   ########.fr       */
+/*   Updated: 2023/03/07 14:28:19 by sabamikan        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_hexa(unsigned int i, int flag)
+ssize_t	ft_print_hexa(unsigned int i, int flag)
 {
 	char	*hex;
 	int		len;
@@ -22,11 +22,11 @@ int	ft_print_hexa(unsigned int i, int flag)
 	{
 		hex = ft_tolower_all(hex);
 		if (hex < 0)
-			return (-1);
+			return (ERROR);
 	}
 	len = ft_putstr_count(hex);
 	if (len < 0)
-		return (-1);
+		return (ERROR);
 	free(hex);
 	return (len);
 }

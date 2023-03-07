@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_int.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kfujii <kfujii@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sabamikan <sabamikan@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:15:35 by kfujii            #+#    #+#             */
-/*   Updated: 2023/02/16 11:15:37 by kfujii           ###   ########.fr       */
+/*   Updated: 2023/03/07 23:23:57 by sabamikan        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_int(int i)
+size_t	ft_print_int(int i)
 {
 	char	*str;
 	int		len;

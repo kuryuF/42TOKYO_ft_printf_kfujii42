@@ -6,7 +6,7 @@
 /*   By: sabamikan <sabamikan@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:13:00 by kfujii            #+#    #+#             */
-/*   Updated: 2023/02/20 15:47:03 by sabamikan        ###   ########.fr       */
+/*   Updated: 2023/03/07 15:26:39 by sabamikan        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,19 @@ size_t	ft_count_output(const char *format, va_list args)
 			i++;
 			arg_len = ft_check_type_field(format[i], args);
 			if (arg_len < 0)
-				return (-1);
+				return (ERROR);
 			else
 				output_len += arg_len;
 		}
 		else
 		{
 			if (ft_putchar_fd_rtnint(format[i], 1) < 0)
-				return(-1);
+				return(ERROR);
 			output_len++;
 		}
 		i++;
 	}
+	if ((int)output_len < INT_MIN || INT_MAX < (int)output_len)
+		return (ERROR);
 	return (output_len);
 }

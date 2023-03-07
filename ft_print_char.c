@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kfujii <kfujii@student.42.fr>              +#+  +:+       +#+        */
+/*   By: sabamikan <sabamikan@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 11:15:06 by kfujii            #+#    #+#             */
-/*   Updated: 2023/02/16 11:15:08 by kfujii           ###   ########.fr       */
+/*   Updated: 2023/03/07 15:16:11 by sabamikan        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_char(char c)
+size_t	ft_print_char(char c)
 {
 	ft_putchar_fd(c, 1);
 	return (1);
